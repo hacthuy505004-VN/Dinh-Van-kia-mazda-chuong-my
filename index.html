@@ -66,21 +66,63 @@
           <button class="filter" data-brand="mazda">Mazda</button>
         </div>
 
-        <div class="cars">
-          <article class="car-card" data-brand="kia">
-            <div class="car-image">
-              <img src="images/kia/new seltos.webp" alt="Kia Seltos">
-            </div>
-            <div class="car-info">
-              <span class="tag">KIA</span>
-              <h3>Seltos</h3>
-              <p>SUV đô thị • Thiết kế trẻ • Nhiều tiện nghi</p>
-              <div class="card-bottom">
-                <strong>Giá từ liên hệ</strong>
-                <a href="#lien-he">Nhận giá →</a>
-              </div>
-            </div>
-          </article>
+<div class="cars">
+  <article class="car-card" data-brand="kia" onclick="openCarDetail()">
+    <div class="car-image">
+      <img src="images/kia/new seltos.webp" alt="Kia Seltos">
+    </div>
+
+    <div class="car-info">
+      <span class="tag">KIA</span>
+      <h3>Seltos</h3>
+      <p>SUV đô thị • Thiết kế trẻ • Nhiều tiện nghi</p>
+
+      <div class="card-bottom">
+        <strong>Giá từ liên hệ</strong>
+        <a href="#lien-he" onclick="event.stopPropagation()">Nhận giá →</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- POPUP CHI TIẾT XE -->
+<div id="carModal" class="car-modal">
+  <div class="car-modal-content">
+
+    <button class="close-modal" onclick="closeCarDetail()">×</button>
+
+    <img 
+      src="images/kia/new seltos.webp" 
+      alt="Kia Seltos"
+      class="modal-car-image"
+    >
+
+    <div class="modal-car-info">
+      <span class="tag">KIA</span>
+
+      <h2>Kia Seltos</h2>
+
+      <p>
+        Kia Seltos – mẫu SUV đô thị hiện đại, thiết kế trẻ trung,
+        không gian rộng rãi, nhiều tiện nghi và phù hợp sử dụng
+        gia đình cũng như đi phố hàng ngày.
+      </p>
+
+      <h3>💰 Giá chỉ từ: 517.000.000 vnđ</h3>
+
+      <div class="modal-buttons">
+        <a href="tel:0972144840" class="btn-call">
+          📞 Liên hệ
+        </a>
+
+        <a href="#lien-he" class="btn-price" onclick="closeCarDetail()">
+          💰 Nhận giá
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
           <article class="car-card" data-brand="kia">
             <div class="car-image kia">KIA SONET</div>
