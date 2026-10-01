@@ -30,22 +30,3 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
   alert("Đã nhận yêu cầu! Bạn có thể bấm OK để mở Zalo và gửi thông tin.");
   window.open(zaloUrl, "_blank");
 });
-<script>
-function openCarDetail() {
-  document.getElementById("carModal").style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
-
-function closeCarDetail() {
-  document.getElementById("carModal").style.display = "none";
-  document.body.style.overflow = "";
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById("carModal");
-
-  if (event.target === modal) {
-    closeCarDetail();
-  }
-}
-</script>
